@@ -24,4 +24,6 @@ fun main(args: Array<String>) {
 	list1.removeAt(1)
 	println()
 	list1.forEach {n -> println("$n")}
+	println()
+	list2.forEach {n -> println("$n")}
 }
