@@ -5,6 +5,9 @@ fun main(args: Array<String>) {
 	val tiger = Animal("Tiger", 10.0, 50.5)
 	tiger.getInfo()
 	
+	val spot = Dog("Spot", 7.0, 25.7, "Ashish")
+	spot.getInfo()
+	
 }
 
 open class Animal2(val name: String, var height: Double, var weight: Double) {
@@ -19,5 +22,12 @@ open class Animal2(val name: String, var height: Double, var weight: Double) {
 	
 	open fun getInfo(): Unit {
 		println("$name is $height tall and weighs $weight")
+	}
+}
+
+class Dog(name: String, height: Double, weight: Double, var owner: String) : Animal2(name, height, weight) {
+	
+	override fun getInfo(): Unit {
+		println("$name is $height tall and weighs $weight and is owned by $owner")
 	}
 }
